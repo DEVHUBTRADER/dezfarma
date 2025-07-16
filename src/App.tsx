@@ -6,20 +6,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Rota pública - Landing Page */}
         <Route path="/" element={<LandingPage />} />
-        
-        {/* Rota administrativa protegida */}
         <Route path="/admin" element={<AdminPlaceholder />} />
-        
-        {/* Redirect qualquer rota inválida para home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
 }
 
-// Placeholder temporário para admin
 function AdminPlaceholder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
